@@ -1,0 +1,3 @@
+select count(1) total from ( 
+                    select '1' type,frdb `name`,count(1) entpNum from data_center.z_jczs_qytjxx where  frdb is not null and frdb <>'' group by frdb having count(1)>1  
+                    ) a 
