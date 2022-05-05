@@ -3,6 +3,7 @@ package com.example.demo.MpTest;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.demo.entity.Student;
 import com.example.demo.entity.User;
@@ -280,5 +281,8 @@ public class StudentTest {
     @Test
     public void testFx(){
         List list = new ArrayList();
+        String[] a = {"a","b","c","d"};
+        list.addAll(Arrays.asList(a));
+        list.forEach(System.out::println);
     }
 }
